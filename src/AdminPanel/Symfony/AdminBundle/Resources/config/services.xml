@@ -92,6 +92,7 @@
             <argument type="service" id="templating"/>
             <argument type="service" id="router"/>
             <argument>%admin.templates.index_page%</argument>
+            <tag name="controller.service_arguments"/>
         </service>
 
         <!-- Manager Visitors -->

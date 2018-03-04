@@ -6,7 +6,7 @@ namespace AdminPanel\Symfony\AdminBundle\Twig\Node;
 
 class DataGridThemeNode extends \Twig_Node
 {
-    public function __construct(\Twig_NodeInterface $dataGrid, \Twig_NodeInterface $theme, \Twig_Node_Expression_Array $vars, $lineno, $tag = null)
+    public function __construct(\Twig_Node_Expression_Name $dataGrid, \Twig_Node_Expression_Name $theme, \Twig_Node_Expression_Array $vars, $lineno, $tag = null)
     {
         parent::__construct(['datagrid' => $dataGrid, 'theme' => $theme, 'vars' => $vars], [], $lineno, $tag);
     }

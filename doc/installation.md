@@ -45,3 +45,28 @@ framework:
     csrf_protection:
         enable: true
 ```
+
+If you using Symfony 4 then update following two files:
+
+```yaml
+# config/packages/framework.yaml
+
+framework:
+    #...
+    form: true
+    csrf_protection: true
+    session: ~
+    templating:
+        engines: ['twig']
+```
+```yaml
+# config/packages/translation.yaml
+
+framework:
+    default_locale: '%locale%'
+    translator:
+        paths:
+            - '%kernel.project_dir%/translations'
+        fallbacks:
+            - '%locale%'
+```
