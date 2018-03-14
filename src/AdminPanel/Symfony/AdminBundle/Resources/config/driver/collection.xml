@@ -10,7 +10,7 @@
 
     <services>
         <!-- Collection extensions -->
-        <service id="datasource.driver.collection.extension" class="%datasource.driver.extension.class%">
+        <service id="datasource.driver.collection.extension" class="%datasource.driver.extension.class%" public="true">
             <argument type="service" id="service_container" />
             <argument type="string">collection</argument>
             <!-- All services with tag "datasource.driver.collection.field" are inserted here by DataSourcePass -->

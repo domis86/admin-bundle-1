@@ -10,7 +10,7 @@
 
     <services>
         <!-- Doctrine extensions -->
-        <service id="datasource.driver.doctrine.extension" class="%datasource.driver.extension.class%">
+        <service id="datasource.driver.doctrine.extension" class="%datasource.driver.extension.class%" public="true">
             <argument type="service" id="service_container" />
             <argument type="string">doctrine</argument>
             <!-- All services with tag "datasource.driver.doctrine.field" are inserted here by DataSourcePass -->
@@ -38,46 +38,46 @@
         </service>
 
         <!-- Doctrine/CoreExtension -->
-        <service id="datasource.driver.doctrine.field.date" class="AdminPanel\Component\DataSource\Driver\Doctrine\Extension\Core\Field\Date">
+        <service id="datasource.driver.doctrine.field.date" class="AdminPanel\Component\DataSource\Driver\Doctrine\Extension\Core\Field\Date" public="true">
             <tag name="datasource.driver.doctrine.field" alias="date" />
         </service>
-        <service id="datasource.driver.doctrine.field.datetime" class="AdminPanel\Component\DataSource\Driver\Doctrine\Extension\Core\Field\DateTime">
+        <service id="datasource.driver.doctrine.field.datetime" class="AdminPanel\Component\DataSource\Driver\Doctrine\Extension\Core\Field\DateTime" public="true">
             <tag name="datasource.driver.doctrine.field" alias="datetime" />
         </service>
-        <service id="datasource.driver.doctrine.field.entity" class="AdminPanel\Component\DataSource\Driver\Doctrine\Extension\Core\Field\Entity">
+        <service id="datasource.driver.doctrine.field.entity" class="AdminPanel\Component\DataSource\Driver\Doctrine\Extension\Core\Field\Entity" public="true">
             <tag name="datasource.driver.doctrine.field" alias="entity" />
         </service>
-        <service id="datasource.driver.doctrine.field.number" class="AdminPanel\Component\DataSource\Driver\Doctrine\Extension\Core\Field\Number">
+        <service id="datasource.driver.doctrine.field.number" class="AdminPanel\Component\DataSource\Driver\Doctrine\Extension\Core\Field\Number" public="true">
             <tag name="datasource.driver.doctrine.field" alias="number" />
         </service>
-        <service id="datasource.driver.doctrine.field.text" class="AdminPanel\Component\DataSource\Driver\Doctrine\Extension\Core\Field\Text">
+        <service id="datasource.driver.doctrine.field.text" class="AdminPanel\Component\DataSource\Driver\Doctrine\Extension\Core\Field\Text" public="true">
             <tag name="datasource.driver.doctrine.field" alias="text" />
         </service>
-        <service id="datasource.driver.doctrine.field.time" class="AdminPanel\Component\DataSource\Driver\Doctrine\Extension\Core\Field\Time">
+        <service id="datasource.driver.doctrine.field.time" class="AdminPanel\Component\DataSource\Driver\Doctrine\Extension\Core\Field\Time" public="true">
             <tag name="datasource.driver.doctrine.field" alias="time" />
         </service>
-        <service id="datasource.driver.doctrine.field.boolean" class="AdminPanel\Component\DataSource\Driver\Doctrine\Extension\Core\Field\Boolean">
+        <service id="datasource.driver.doctrine.field.boolean" class="AdminPanel\Component\DataSource\Driver\Doctrine\Extension\Core\Field\Boolean" public="true">
             <tag name="datasource.driver.doctrine.field" alias="boolean" />
         </service>
-        <service id="datasource.driver.doctrine.subscriber.result_indexer" class="AdminPanel\Component\DataSource\Driver\Doctrine\Extension\Core\EventSubscriber\ResultIndexer">
+        <service id="datasource.driver.doctrine.subscriber.result_indexer" class="AdminPanel\Component\DataSource\Driver\Doctrine\Extension\Core\EventSubscriber\ResultIndexer" public="true">
             <tag name="datasource.driver.doctrine.subscriber" alias="result_indexer" />
             <argument type="service" id="doctrine" />
         </service>
 
         <!-- OrderingExtension -->
-        <service id="datasource.driver.doctrine.subscriber.ordering" class="AdminPanel\Component\DataSource\Extension\Core\Ordering\Driver\DoctrineExtension">
+        <service id="datasource.driver.doctrine.subscriber.ordering" class="AdminPanel\Component\DataSource\Extension\Core\Ordering\Driver\DoctrineExtension" public="true">
             <tag name="datasource.driver.doctrine.subscriber" alias="ordering" />
         </service>
-        <service id="datasource.driver.doctrine.field.subscriber.ordering" class="AdminPanel\Component\DataSource\Extension\Core\Ordering\Field\FieldExtension">
+        <service id="datasource.driver.doctrine.field.subscriber.ordering" class="AdminPanel\Component\DataSource\Extension\Core\Ordering\Field\FieldExtension" public="true">
             <tag name="datasource.driver.doctrine.field.subscriber" alias="ordering" />
         </service>
 
         <!-- Symfony/FormExtension -->
-        <service id="datasource.driver.doctrine.field.subscriber.symfonyform" class="AdminPanel\Component\DataSource\Extension\Symfony\Form\Field\FormFieldExtension">
+        <service id="datasource.driver.doctrine.field.subscriber.symfonyform" class="AdminPanel\Component\DataSource\Extension\Symfony\Form\Field\FormFieldExtension" public="true">
             <tag name="datasource.driver.doctrine.field.subscriber" alias="symfonyform" />
             <argument type="service" id="form.factory" />
         </service>
-        <service id="datasource.driver.doctrine.field.subscriber.symfony_null_form" class="AdminPanel\Symfony\AdminBundle\DataSource\Extension\Symfony\Form\Field\FormFieldExtension">
+        <service id="datasource.driver.doctrine.field.subscriber.symfony_null_form" class="AdminPanel\Symfony\AdminBundle\DataSource\Extension\Symfony\Form\Field\FormFieldExtension" public="true">
             <tag name="datasource.driver.doctrine.field.subscriber" alias="symfony_null_form" />
             <argument type="service" id="translator" />
         </service>

@@ -9,7 +9,7 @@
     </parameters>
 
     <services>
-        <service id="datagrid.subscriber.configuration.configuration_builder" class="%datagrid.subscriber.configuration.configuration_builder.class%">
+        <service id="datagrid.subscriber.configuration.configuration_builder" class="%datagrid.subscriber.configuration.configuration_builder.class%" public="true">
             <tag name="datagrid.subscriber" alias="configuration.configuration_builder"/>
             <argument type="service" id="kernel" />
         </service>

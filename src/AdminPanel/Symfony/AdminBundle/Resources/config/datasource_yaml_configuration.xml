@@ -9,7 +9,7 @@
     </parameters>
 
     <services>
-        <service id="datasource.subscriber.configuration.configuration_builder" class="%datasource.subscriber.configuration.configuration_builder.class%">
+        <service id="datasource.subscriber.configuration.configuration_builder" class="%datasource.subscriber.configuration.configuration_builder.class%" public="true">
             <tag name="datasource.subscriber" alias="configuration.configuration_builder"/>
             <argument type="service" id="kernel" />
         </service>

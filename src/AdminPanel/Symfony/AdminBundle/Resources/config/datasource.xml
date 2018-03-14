@@ -47,22 +47,22 @@
         </service>
 
         <!-- PaginationExtension -->
-        <service id="datasource.subscriber.pagination" class="AdminPanel\Component\DataSource\Extension\Core\Pagination\EventSubscriber\Events">
+        <service id="datasource.subscriber.pagination" class="AdminPanel\Component\DataSource\Extension\Core\Pagination\EventSubscriber\Events" public="true">
             <tag name="datasource.subscriber" alias="pagination" />
         </service>
 
         <!-- OrderingExtension -->
-        <service id="datasource.subscriber.ordering" class="AdminPanel\Component\DataSource\Extension\Core\Ordering\EventSubscriber\Events">
+        <service id="datasource.subscriber.ordering" class="AdminPanel\Component\DataSource\Extension\Core\Ordering\EventSubscriber\Events" public="true">
             <tag name="datasource.subscriber" alias="ordering" />
         </service>
 
         <!-- Symfony/CoreExtension -->
-        <service id="datasource.subscriber.symfonyrequest" class="AdminPanel\Component\DataSource\Extension\Symfony\Core\EventSubscriber\BindParameters">
+        <service id="datasource.subscriber.symfonyrequest" class="AdminPanel\Component\DataSource\Extension\Symfony\Core\EventSubscriber\BindParameters" public="true">
             <tag name="datasource.subscriber" alias="symfonyrequest" />
         </service>
 
         <!-- Symfony/FormExtension -->
-        <service id="datasource.subscriber.symfonyform" class="AdminPanel\Component\DataSource\Extension\Symfony\Form\EventSubscriber\Events">
+        <service id="datasource.subscriber.symfonyform" class="AdminPanel\Component\DataSource\Extension\Symfony\Form\EventSubscriber\Events" public="true">
             <tag name="datasource.subscriber" alias="symfonyform" />
         </service>
     </services>
